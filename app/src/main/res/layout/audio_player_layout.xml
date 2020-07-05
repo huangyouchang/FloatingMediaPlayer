@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.foatingaudioplayer.PlayerDragView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/gif_image_layout"
+        android:layout_width="@dimen/dp_62"
+        android:layout_height="@dimen/dp_62"
+        android:layout_marginStart="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:background="@drawable/common_audio_zoom_bg">
+        <ImageView
+            android:id="@+id/gif_image"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:clickable="false"
+            android:layout_gravity="center"
+            android:src="@drawable/common_audio_gif"
+            />
+    </FrameLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/all_audio_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_62"
+        android:background="@drawable/common_window_audio"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/dp_5"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/drawdown_image"
+            android:layout_width="@dimen/dp_23"
+            android:layout_height="@dimen/dp_23"
+            android:layout_marginStart="@dimen/dp_22"
+            android:src="@drawable/common_drawdown" />
+
+        <ImageView
+            android:id="@+id/play_stop_image"
+            android:layout_width="@dimen/dp_17"
+            android:layout_height="@dimen/dp_27"
+            android:layout_marginStart="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_2"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingEnd="@dimen/dp_2"
+            android:paddingBottom="@dimen/dp_5"
+            android:src="@drawable/common_audio_playing" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_52"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingTop="@dimen/dp_5"
+                android:textColor="@color/cl_text_w1"
+                android:textSize="@dimen/sp_12"
+                tools:text="哈哈哈哈哈哈哈哈哈哈" />
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:maxHeight="@dimen/dp_2"
+                android:minHeight="@dimen/dp_2"
+                android:progress="0"
+                android:progressDrawable="@drawable/common_seek_bar_bg"
+                android:thumb="@drawable/common_seekbar_thumb" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingEnd="@dimen/dp_12">
+
+                <TextView
+                    android:id="@+id/start_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/cl_text_b7"
+                    android:textSize="@dimen/sp_10"
+                    tools:text="01:00" />
+
+                <TextView
+                    android:id="@+id/end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/cl_text_b7"
+                    android:textSize="@dimen/sp_10"
+                    tools:text="02:30" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/audio_speed_tv"
+                android:layout_width="44dp"
+                android:layout_height="22dp"
+                android:background="@drawable/common_audio_speed_shape"
+                android:gravity="center"
+                android:text="正常"
+                android:textColor="@color/cl_text_w1"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="语速"
+                android:textColor="@color/cl_text_b7"
+                android:textSize="@dimen/sp_10" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/close_image"
+            android:layout_width="@dimen/dp_23"
+            android:layout_height="@dimen/dp_23"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_marginStart="@dimen/dp_5"
+            android:padding="@dimen/dp_5"
+            android:src="@drawable/common_audio_close" />
+
+    </LinearLayout>
+
+</com.example.foatingaudioplayer.PlayerDragView>
